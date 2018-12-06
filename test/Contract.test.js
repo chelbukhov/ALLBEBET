@@ -330,4 +330,31 @@ describe('Серия тестов для проверки варианта Work 
         assert(myBalance == 1000);
     });
 
+    it('Проверка баланса на account[9] = 100 эфиров- ...', async () => {
+        accBalance = await web3.eth.getBalance(accounts[9]);
+        accBalance = web3.utils.fromWei(accBalance, 'ether');
+        assert(accBalance == 100);
+        console.log("Balance of account[9]: ", accBalance);
+    });
+
+
+    it('Проверка вывода средств с баланса контракта - 10 эфиров...', async () => {
+        try {
+            await contract.methods.withdrawFunds(accounts[9], "10000000000000000000").send({
+                from: accounts[0],
+                gas: "1000000"
+            });
+               
+        } catch (error) {
+            assert(false)
+            console.log(error)            
+        }
+    });
+
+    it('Проверка баланса на account[9] = 110 эфиров- ...', async () => {
+        accBalance = await web3.eth.getBalance(accounts[9]);
+        accBalance = web3.utils.fromWei(accBalance, 'ether');
+        assert(accBalance == 110);
+        console.log("Balance of account[9]: ", accBalance);
+    });
 });
