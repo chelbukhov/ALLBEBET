@@ -1,7 +1,7 @@
-ТЗ на смартконтракт:
+РўР— РЅР° СЃРјР°СЂС‚РєРѕРЅС‚СЂР°РєС‚:
 https://docs.google.com/document/d/1mKIOj3qBDutjoKP8rm5DeD3Suvk797_mUq3huE8nU94/edit
 
-Тестирование:
+РўРµСЃС‚РёСЂРѕРІР°РЅРёРµ:
 Remix
 Truffle:	test_ganache-cli.odt
 SmartCheck: 	https://tool.smartdec.net/scan/7eef2361447d4ddb85b8eb30e87ea9dc
